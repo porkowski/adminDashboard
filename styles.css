@@ -57,21 +57,26 @@ body {
 
 .header {
     display:grid;
-    grid-template-rows: 1.25fr 2fr;
+    grid-template-columns: 6fr 3fr;
+    grid-template-rows: 1.25fr .25fr 2fr;
     margin:25px;
-    row-gap:10px;
+    row-gap:20px;
 }
 
 .header > * {
     border: solid blue;
 }
 
-.headerRow1 {
+.headerLeft{
     display:grid;
-    grid-template-columns: 1fr 4fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 4fr;
 }
 
-
+.headerRight {
+    margin: 0 25px 0 25px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 3fr;
+}
 
 
 /* MAIN SECTION CSS */
@@ -79,6 +84,7 @@ body {
 .main {
     display:grid;
     grid-template-columns: 3fr 1fr;
+    grid-template-rows:.45fr 4.25fr .45fr 4.25fr;
     border:solid blue;
 }
 
@@ -86,12 +92,54 @@ body {
     display:grid;
     gap:15px;
     margin:15px;
+    grid-row: 2/5;
     grid-template-columns: repeat(auto-fit, minmax(200px,485px));
 }
 
-.rightbar {
-    grid-column:span 1;
-}
+
 .card {
     border:solid blue;
+}
+
+.trendingHeader {
+    grid-row:3;
+    grid-column:2;
+}
+
+.projectHeader {
+    margin-left:15px;
+    align-self:end;
+}
+
+.rightBarHeader,
+.trendingHeader {
+    align-self:end;
+}
+
+.announcements {
+    margin-top:15px;
+    grid-row: 2/3;
+    grid-column:2/3;
+    border:solid blue;
+    margin-right:25px;
+    display:grid;
+    grid-template-rows: repeat(auto-fit, minmax(50px,1fr));
+    row-gap:15px;
+}
+
+.trending {
+    margin-top:15px;
+    grid-row:4/5;
+    grid-column:2/3;
+    border: solid blue;
+    margin-right:25px;
+    margin-bottom:15px;
+    display:grid;
+    grid-template-rows: repeat(auto-fit, minmax(50px,1fr));
+    row-gap:15px;
+}
+
+.innerTrending,
+.innerAnnouncement {
+border:solid blue;
 }
