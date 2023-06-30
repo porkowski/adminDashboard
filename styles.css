@@ -1,3 +1,13 @@
+/*Import font and assign to entire page */
+@font-face {
+    font-family: Fira Sans;
+    src: url(FiraSans-Regular.ttf);
+}
+
+body {
+    font-family: Fira Sans;
+}
+
 .sidebar,
 .header,
 .main {
@@ -58,7 +68,7 @@ body {
 .header {
     display:grid;
     grid-template-columns: 6fr 3fr;
-    grid-template-rows: 1.25fr .25fr 2fr;
+    grid-template-rows: 1.25fr 2.25fr;
     margin:25px;
     row-gap:20px;
 }
@@ -78,6 +88,52 @@ body {
     grid-template-columns: 1fr 1fr 3fr;
 }
 
+.IconName {
+    grid-row:2/4;
+    display:grid;
+    gap:10px;
+    grid-template-columns: 1fr 6fr;
+}
+
+.icon,
+.name {
+    border:solid pink;
+}
+
+.name > p {
+    font-size:.9rem;
+    font-weight:700;
+}
+
+#nameGreeting {
+    font-size:1.5rem;
+}
+
+.icon {
+    align-self:center;
+    justify-self: center;
+}
+
+.headerButtons {
+    grid-row:2/4;
+    grid-column:2/3;
+    display:grid;
+    grid-auto-flow: column;
+    align-content: end;
+    justify-content: space-between;
+    column-gap:10px;
+}
+
+#bluBtn {
+  border:none;
+  text-decoration: none;
+  padding: 1.1rem 3.25rem;
+  background-color: rgb(127, 168, 255);
+  font-size:1rem;
+  font-weight:600;
+  color:white;
+  border-radius:15px;
+}
 
 /* MAIN SECTION CSS */
 
