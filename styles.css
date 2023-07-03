@@ -19,11 +19,7 @@ button:active {
     opacity:80%;
 }
 
-.sidebar,
-.header,
-.main {
-    border:solid green;
-}
+
 
 body {
     height:100vh;
@@ -91,7 +87,15 @@ button.innerButtons {
     text-align: start;
 }
 
+button > span {
+    position:relative;
+}
 
+span > img {
+    position:absolute;
+    left:-50px;
+    top:-2px;
+}
 
 /*HEADER CSS */
 
@@ -100,12 +104,9 @@ button.innerButtons {
     grid-template-columns: 6fr 3fr;
     grid-template-rows: 1.25fr 2.25fr;
     margin:25px;
-
+    box-shadow:10px rgb(192, 192, 192);
 }
 
-.header > * {
-    border: solid blue;
-}
 
 .headerLeft{
     display:flex;
