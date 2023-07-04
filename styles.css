@@ -39,6 +39,8 @@ body {
     grid-template-rows: 5rem repeat(auto-fill,minmax(320px,1fr));
     background-color:  rgb(127, 168, 255) ;
     color: white;
+    position:sticky;
+    top:0;
     
   
 }
@@ -65,6 +67,7 @@ body {
 }
 
 .adtlButtons {
+    margin-top:150px;
     display:grid;
     grid-template-rows: repeat(3, 3rem);
     row-gap:15px;
@@ -104,7 +107,6 @@ span > img {
     grid-template-columns: 6fr 3fr;
     grid-template-rows: 1.25fr 2.25fr;
     margin:25px;
-    box-shadow:10px rgb(192, 192, 192);
 }
 
 
@@ -228,7 +230,8 @@ span > img {
     display:grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows:.45fr 4.25fr .45fr 4.25fr;
-    border:solid blue;
+    box-shadow: inset 0px 10px 10px rgb(159, 159, 255);
+    background-color: rgba(235, 235, 235, 0.884);
 }
 
 .cards {
@@ -236,13 +239,46 @@ span > img {
     gap:15px;
     margin:15px;
     grid-row: 2/5;
-    grid-template-columns: repeat(auto-fit, minmax(200px,485px));
+    grid-template-columns: repeat(auto-fit, minmax(300px,580px));
 }
 
 
 .card {
-    border:solid blue;
+    background-color:white;
+    border-left: 10px solid rgb(19, 173, 212);
+    border-radius:10px;
+    box-shadow: 5px 5px 15px gray;
+    position:relative;
 }
+
+.card h4,
+.card p {
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.card h4 {
+    margin-top:30px;
+}
+
+.card button {
+    border:none;
+    background:none;
+}
+
+.cardBtns {
+    position:absolute;
+    left:420px;
+    bottom:2px;
+}
+
+.projectHeader,
+.rightBarHeader,
+.trendingHeader {
+    font-size:1.2rem;
+    font-weight:800;
+}
+
 
 .trendingHeader {
     grid-row:3;
@@ -260,29 +296,56 @@ span > img {
 }
 
 .announcements {
+    background-color:white;
+    border-radius:10px;
+    box-shadow: 5px 5px 15px gray;
     margin-top:15px;
     grid-row: 2/3;
     grid-column:2/3;
-    border:solid blue;
     margin-right:25px;
     display:grid;
     grid-template-rows: repeat(auto-fit, minmax(50px,1fr));
     row-gap:15px;
+    padding:25px;
+}
+
+hr {
+    border-top:1px solid gray;
 }
 
 .trending {
+    background-color:white;
+    border-radius:10px;
+    box-shadow: 5px 5px 15px gray;
     margin-top:15px;
     grid-row:4/5;
     grid-column:2/3;
-    border: solid blue;
     margin-right:25px;
     margin-bottom:15px;
+    padding:15px;
     display:grid;
     grid-template-rows: repeat(auto-fit, minmax(50px,1fr));
+    grid-template-columns:1fr 2fr;
+    grid-auto-flow: column;
     row-gap:15px;
 }
 
-.innerTrending,
-.innerAnnouncement {
-border:solid blue;
+.innerTrending {
+    grid-column:1/2;
+    justify-self: center;
+    height:65px;
+}
+
+.trendingAbout {
+    grid-column: 2/3;
+}
+
+.trendingAbout h5 {
+    margin-top:15px;
+    margin-bottom:6px;
+}
+
+.trendingAbout p {
+    margin-top:0px;
+    color:gray;
 }
