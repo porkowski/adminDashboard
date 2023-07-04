@@ -39,16 +39,26 @@ body {
     grid-template-rows: 5rem repeat(auto-fill,minmax(320px,1fr));
     background-color:  rgb(127, 168, 255) ;
     color: white;
-    position:sticky;
-    top:0;
+
     
   
 }
 
 .sidebar > * {
     margin: 25px 25px 0 25px;
+    position:sticky;
+    top:30px;
 
 }
+
+.sidebar .navigation {
+    top:150px;
+}
+
+.sidebar .adtlButtons {
+    top:640px;
+}
+
 
 .title {
     max-height:80px;
@@ -306,7 +316,20 @@ span > img {
     display:grid;
     grid-template-rows: repeat(auto-fit, minmax(50px,1fr));
     row-gap:15px;
-    padding:25px;
+    padding:5px;
+    padding-left:10px;
+    padding-right:10px;
+    font-size:.8rem;
+}
+
+.announcements h4 {
+    margin-top:6px;
+    margin-bottom:2px;
+    font-weight:400;
+}
+
+.announcements p {
+    color:gray;
 }
 
 hr {
@@ -333,7 +356,7 @@ hr {
 .innerTrending {
     grid-column:1/2;
     justify-self: center;
-    height:65px;
+    height:60px;
 }
 
 .trendingAbout {
